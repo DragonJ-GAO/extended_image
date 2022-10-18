@@ -3,12 +3,17 @@ description: Official extension image, support placeholder(loading)/ failed stat
 version: 6.3.1
 homepage: https://github.com/fluttercandies/extended_image
 
+publish_to: "none"
+
 environment:
-  sdk: '>=2.18.0 <3.0.0'
-  flutter: '>=3.3.0'
+  sdk: ">=2.18.0 <3.0.0"
+  flutter: ">=3.3.0"
 
 dependencies:
-  extended_image_library: ^3.4.0
+  extended_image_library:
+    git:
+      url: git@github.com:DragonJ-GAO/extended_image_library.git
+      ref: master
   flutter:
     sdk: flutter
   meta: ^1.7.0

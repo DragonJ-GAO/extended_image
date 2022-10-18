@@ -233,6 +233,7 @@ class ExtendedImage extends StatefulWidget {
     int? maxBytes,
     bool cacheRawData = false,
     String? imageCacheName,
+    BufferIntercepter? intercepter,
   })  : assert(cacheWidth == null || cacheWidth > 0),
         assert(cacheHeight == null || cacheHeight > 0),
         image = ExtendedResizeImage.resizeIfNeeded(
@@ -244,6 +245,7 @@ class ExtendedImage extends StatefulWidget {
                   package: package,
                   cacheRawData: cacheRawData,
                   imageCacheName: imageCacheName,
+                  intercepter: intercepter,
                 )
               : ExtendedAssetImageProvider(
                   name,
@@ -251,6 +253,7 @@ class ExtendedImage extends StatefulWidget {
                   package: package,
                   cacheRawData: cacheRawData,
                   imageCacheName: imageCacheName,
+                  intercepter: intercepter,
                 ),
           compressionRatio: compressionRatio,
           maxBytes: maxBytes,
@@ -329,6 +332,7 @@ class ExtendedImage extends StatefulWidget {
     int? maxBytes,
     bool cacheRawData = false,
     String? imageCacheName,
+    BufferIntercepter? intercepter,
   })  :
         // FileImage is not supported on Flutter Web therefore neither this method.
         assert(
@@ -344,6 +348,7 @@ class ExtendedImage extends StatefulWidget {
             scale: scale,
             cacheRawData: cacheRawData,
             imageCacheName: imageCacheName,
+            intercepter: intercepter,
           ),
           compressionRatio: compressionRatio,
           maxBytes: maxBytes,
@@ -419,6 +424,7 @@ class ExtendedImage extends StatefulWidget {
     int? maxBytes,
     bool cacheRawData = false,
     String? imageCacheName,
+    BufferIntercepter? intercepter,
   })  : assert(cacheWidth == null || cacheWidth > 0),
         assert(cacheHeight == null || cacheHeight > 0),
         image = ExtendedResizeImage.resizeIfNeeded(
@@ -427,6 +433,7 @@ class ExtendedImage extends StatefulWidget {
             scale: scale,
             cacheRawData: cacheRawData,
             imageCacheName: imageCacheName,
+            intercepter: intercepter,
           ),
           compressionRatio: compressionRatio,
           maxBytes: maxBytes,
@@ -496,6 +503,7 @@ class ExtendedImage extends StatefulWidget {
     int? maxBytes,
     bool cacheRawData = false,
     String? imageCacheName,
+    BufferIntercepter? intercepter,
     Duration? cacheMaxAge,
   })  : assert(cacheWidth == null || cacheWidth > 0),
         assert(cacheHeight == null || cacheHeight > 0),
@@ -513,6 +521,7 @@ class ExtendedImage extends StatefulWidget {
             printError: printError,
             cacheRawData: cacheRawData,
             imageCacheName: imageCacheName,
+            intercepter: intercepter,
             cacheMaxAge: cacheMaxAge,
           ),
           compressionRatio: compressionRatio,
