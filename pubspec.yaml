@@ -13,7 +13,7 @@ dependencies:
   extended_image_library:
     git:
       url: git@github.com:DragonJ-GAO/extended_image_library.git
-      ref: master
+      ref: 2fbc90d
   flutter:
     sdk: flutter
   meta: ^1.7.0
